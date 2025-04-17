@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>කෝඩින් වෙසක් කලාපය 2023</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    
+    .layer {
+      position: absolute;
+       width: 100%;
+      height: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      
+    }
+  </style>
+  </head>
+  <body>
+    
+    <div class="layer" style="background-color:black;z-index: 1;">       
+        <img style=" position: absolute;top: 115px;left: 120px; width:600px; hight:600;"
+            src="https://cdn.glitch.global/a65e489c-0622-426c-9bc2-5e7208dcabff/Picture7.png?v=1683499098345" />
+    <img style=" position: absolute;top: 50px;left: 50px; width:720px; hight:710;"
+            src="https://cdn.glitch.global/a65e489c-0622-426c-9bc2-5e7208dcabff/frameStyle2.gif?v=1683487847170" />
+  </div>
+    
+     <div class="layer" style="background-color: '#0f000';z-index: 14;">
+        <a href="frame8.html" style="position: absolute;top: 610px;left: 360px; background-color:pink;border-radius:10px;width: 100px;height: 30px; text-decoration: none; color: #000;display: flex;justify-content: center;align-items: center;">NEXT</a>
+     <audio controls autoplay style="position: absolute;top: 720px;left: 260px;" >
+        <source id = "myaudio" src="https://cdn.glitch.global/a65e489c-0622-426c-9bc2-5e7208dcabff/Nala%20Pana7.mp3?v=1683520884049" type="audio/mp3" autoplay>
+      </audio>
+</div>
+    
+     <script>
+    var links = document.getElementsByTagName("a");
+    var current = 0;
+
+    function changePage() {
+        current = (current + 1) % links.length;
+        links[current].click();
+    }
+
+    setInterval(changePage, 67000);
+</script>
+    
+  </body>
+</html>
