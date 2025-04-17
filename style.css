@@ -1,0 +1,11 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f4f6;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+/* Add more styles here */
