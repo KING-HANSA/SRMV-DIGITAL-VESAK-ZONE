@@ -21,8 +21,16 @@ header {
 }
 
 .logo img {
-  max-width: 150px;
-  height: auto;
+  max-width: 100%;  /* Ensures the logo scales with the container */
+  height: auto;     /* Maintains the aspect ratio of the logo */
+  width: 120px;     /* Default width for larger screens */
+}
+
+/* Make logo smaller on smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+  .logo img {
+    width: 100px;  /* Reduce logo size on mobile */
+  }
 }
 
 nav {
