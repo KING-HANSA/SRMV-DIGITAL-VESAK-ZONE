@@ -23,8 +23,10 @@ header {
 }
 
 header .logo img {
-  width: 120px; /* Adjust logo size */
-  height: auto;
+  width: 100%;  /* Make logo responsive */
+  max-width: 120px;  /* Limit maximum width */
+  height: auto;  /* Keep aspect ratio */
+  transition: width 0.3s ease;  /* Smooth transition */
 }
 
 /* Navigation */
@@ -80,4 +82,36 @@ header nav ul li a:hover {
 
 .float-btn:hover {
   background-color: #f1c40f;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet */
+@media (max-width: 768px) {
+  header .logo img {
+    max-width: 100px;  /* Reduce logo size on tablets */
+  }
+
+  header nav ul li {
+    margin: 0 10px;  /* Reduce space between nav items */
+  }
+
+  header nav ul li a {
+    font-size: 14px;  /* Smaller font size for navigation */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  header .logo img {
+    max-width: 80px;  /* Further reduce logo size on mobile */
+  }
+
+  header nav ul li {
+    margin: 0 5px;  /* Further reduce space between nav items */
+  }
+
+  header nav ul li a {
+    font-size: 12px;  /* Smaller font size for navigation */
+  }
 }
