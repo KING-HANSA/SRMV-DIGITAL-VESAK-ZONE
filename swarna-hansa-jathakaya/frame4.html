@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ස්වර්ණ හංස ජාතකය - හතරවන කොටුව</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    
+    .layer {
+      position: absolute;
+       width: 100%;
+      height: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-button, .prev-button, .next-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover, .prev-button:hover, .next-button:hover {
+  background-color: #3e8e41;
+}
+
+.home-button:disabled, .prev-button:disabled, .next-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.next-button {
+  margin-left: 20px;
+}
+    }
+  </style>
+  </head>
+  <body>
+    
+    <div class="layer" style="background-color:'#0f000';z-index: 2; display: flex; justify-content: center; align-items: center;">
+      <img style=" position: relative; top:10px; left: 335px; width:250px; height:250;" src="https://cdn.glitch.global/f31a652d-9461-4378-8d9b-ca70072d4b66/4.png?v=1684139875325" />
+      <img style=" position: relative; width:540; height:540; transform: rotate(12deg);"
+        src="https://cdn.glitch.global/f31a652d-9461-4378-8d9b-ca70072d4b66/FrameForUseSlow.gif?v=1684081732674" />
+    </div>
+    
+     <div class="layer" style="background-color: '#0f000';z-index: 14;">
+        
+      <div class="button-container">
+        <button class="prev-button"><a style="text-decoration: none;" href="frame3.html">Previous</a></button>
+        <button class="home-button"><a style="text-decoration: none;" href="index.html">Home</a></button>
+        <button class="next-button"><a style="text-decoration: none;" href="frame5.html">Next</a></button>
+      </div>
+     <audio controls autoplay style="position: absolute;top: 420px;left: 260px;" >
+        <source id = "myaudio" src="https://cdn.glitch.global/f31a652d-9461-4378-8d9b-ca70072d4b66/4.wav?v=1684141509144" type="audio/mp3" autoplay>
+      </audio>
+</div>
+    
+  </body>
+</html>
