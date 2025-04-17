@@ -1,10 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modern NavBar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SRMV වෙසක් කලාපය 2025</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f4f6;
+    }
+
+    header {
+      background-color: #1f2937;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #111827;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+        display: none;
+        border-radius: 8px;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -17,10 +97,18 @@
     <a href="#">Contact</a>
   </nav>
   <div class="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </header>
 
-<script src="script.js"></script>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('nav-links');
+    nav.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
